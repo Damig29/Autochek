@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Autochek: Apply for car loans in Nigeria | Buy and Sell Cars | Find new
+      and Old Cars
+    </title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />    
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/style2.css" />
+    <link rel="stylesheet" href="assets/nav.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.5.2-web/css/all.css"
+    />
+    <style>
+      .custom-header {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+      .custom-form-container {
+        color: #212529;
+        width: 482px;
+        height: 765px;
+        box-shadow: 0px 16px 24px 0px #60617029, 
+                    0px 2px 8px 0px #28293D0A;
+      }
+      label.form-label, label{
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .phone-input-group .form-control:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .phone-input-group .form-control:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-group-full {
+            margin-bottom: 1rem;
+        }
+        .input {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 0.1rem;
+            padding: 0.5rem 0.75rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+        .phone-group {
+            display: flex;
+        }
+        .phone-prefix {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem 0 0 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: #f3f4f6;
+        }
+        .phone-prefix img {
+            margin-right: 0.5rem;
+        }
+        .phone-input {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.5rem 0.75rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .phone-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="container">
+          <div class="logo">
+            <img
+              src="assets/images/logo.webp"
+              alt=""
+              style="border-right: 1px solid #c5c3c3"
+            />
+            <div class="country">
+              <img src="assets/images/ng.webp" alt="" />
+              <i class="fa fa-caret-down" style="color: #999"></i>
+            </div>
+          </div>
+          <div class="list">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="carsales.html">Buy Car</a></li>
+              <li><a href="newcars.html">Brand New</a></li>
+              <li><a href="carloan.html">Car Loan</a></li>
+              <li class="new"><a href="cashloan.html">Cash Loan</a></li>
+              <p class="newd">New</p>
+              <li><a href="sellcar.html">Sell Car</a></li>
+              <li><a href="salesag.html">Sales Agent</a></li>
+            </ul>
+          </div>
+          <div class="number">
+            <a href="tel: +2347002886243">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.9121 1L16.9702 4.05812L13.9121 7.11625"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10.8535 4.05762H16.9698"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M16.2051 13.1715V15.4651C16.2059 15.678 16.1623 15.8888 16.077 16.0839C15.9917 16.279 15.8666 16.4541 15.7097 16.598C15.5528 16.742 15.3676 16.8516 15.1659 16.9198C14.9642 16.988 14.7505 17.0133 14.5384 16.9942C12.1858 16.7386 9.92599 15.9347 7.9405 14.6471C6.09326 13.4733 4.52713 11.9071 3.35332 10.0599C2.06124 8.06538 1.25716 5.79456 1.00621 3.4314C0.9871 3.21998 1.01223 3.0069 1.07998 2.80573C1.14774 2.60455 1.25664 2.41969 1.39976 2.26291C1.54288 2.10613 1.71707 1.98086 1.91125 1.89509C2.10543 1.80932 2.31534 1.76492 2.52762 1.76472H4.82121C5.19225 1.76107 5.55195 1.89246 5.83327 2.1344C6.1146 2.37634 6.29835 2.71232 6.35028 3.07972C6.44708 3.81372 6.62662 4.53441 6.88545 5.22805C6.98831 5.50169 7.01057 5.79909 6.9496 6.085C6.88862 6.3709 6.74696 6.63334 6.54141 6.84121L5.57046 7.81216C6.65881 9.7262 8.2436 11.311 10.1576 12.3993L11.1286 11.4284C11.3365 11.2228 11.5989 11.0812 11.8848 11.0202C12.1707 10.9592 12.4681 10.9815 12.7418 11.0844C13.4354 11.3432 14.1561 11.5227 14.8901 11.6195C15.2615 11.6719 15.6006 11.859 15.8431 12.1451C16.0856 12.4313 16.2144 12.7966 16.2051 13.1715Z"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <p>+234 700-288-6243</p>
+            </a>
+          </div>
+          <div class="bar" data-bs-toggle="modal" data-bs-target="#myModal">
+            <button class="btn">
+              <i
+                class="fa fa-bars"
+                style="
+                  color: #777;
+                  border-radius: 25px;
+                  padding: 7px 20px;
+                "
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- The Modal -->
+    <div class="modal-pop-up">
+      <div
+        class="modal fade right"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="ModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+              <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+  <!-- End of Modal -->
+
+    <div class="sellpage">
+      <div class="sellcontainer py-5">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="content">
+              <span>We are here to help sell your car</span>
+              <h2>The easiest and most reliable way to sell your car.</h2>
+              <p>
+                With our extensive network of buyers and sellers, we're
+                confident that we can find the perfect new owner for your car.
+                So why wait?
+              </p>
+              <div class="image">
+                <img
+                  src="image/sell_car_section_image.webp"
+                  alt=""
+                  width="550"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-white custom-form-container rounded-3 p-4 p-md-5">
+              <div class="form-header">
+                <h3 class="h3 fw-semibold mb-3">
+                  Book an inspection
+                </h3>
+                <p>
+                  Cars that are inspected by Autochek sell significantly faster
+                  than cars that are not.
+                </p>
+              </div>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div class="form-group-full">
+                  <label class="label" for="phone">Phone number</label>
+                  <div class="phone-group">
+                      <div class="phone-prefix">
+                          <img alt="Country flag" src="assets/images/ng.webp" width="32"/>
+                      </div>
+                      <input class="phone-input" id="phone" placeholder="234" type="text"/>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label"
+                    >Pickup Address</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Enter your address"
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="state" class="form-label"
+                      >State</label
+                    >
+                    <select class="form-select" id="state">
+                      <option>Select State</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="city" class="form-label"
+                      >City</label
+                    >
+                    <div  style="position: relative;">
+                      <select class="form-select" id="city">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-b933ss" focusable="false" aria-hidden="true" viewBox="0 0 20 20" data-testid="SearchIcon" width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0;">
+                          <path d="M8.04167 14.8333C11.7236 14.8333 14.7083 11.8486 14.7083 8.16667C14.7083 4.48477 11.7236 1.5 8.04167 1.5C4.35977 1.5 1.375 4.48477 1.375 8.16667C1.375 11.8486 4.35977 14.8333 8.04167 14.8333Z" stroke="#C7C9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M16.375 16.5L12.75 12.875" stroke="#C7C9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <option></option>
+                        <option value="">No options</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="date" class="form-label"
+                      >Date</label
+                    >
+                    <input type="date" class="form-control" id="date" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="time" class="form-label"
+                      >Time</label
+                    >
+                    <input type="time" class="form-control" id="time" />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn bg-yellow-500 w-100 fw-semibold py-2"
+                >
+                  Book Inspection
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-links">
+        <div class="download">
+          <img src="assets/images/NDPR.png" alt="" />
+          <div class="appstore">
+            <a href="#"><img src="assets/images/google-play.webp" alt="" /></a>
+            <a href="#"><img src="assets/images/appstore.webp" alt="" /></a>
+          </div>
+        </div>
+        <div class="links">
+          <div class="useful" style="width: 250px">
+            <h5>Useful Links</h5>
+            <p>
+              <a href="#">About Us</a> | <a href="#">Contact Us</a> |
+              <a href="#">FAQ</a> | <br /><a href="#">Terms of Service</a> |
+              <a href="#">Whistleblow</a> | <a href="#">Blog</a> | <br /><a
+                href="#"
+                >Career</a
+              >
+              | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+            </p>
+          </div>
+        </div>
+        <div class="links">
+          <h5>Top Brands</h5>
+          <p>
+            <a href="#">Audi</a> | <a href="#">BMW</a> | <a href="#">Honda</a> |
+            <a href="#">Hyundai</a> | <a href="#">Jaguar</a> |
+            <a href="#">KIA</a> | <br /><a href="#">Land Rover</a> |
+            <a href="#">Lexus</a> | <a href="#">Mercedes-Benz</a> |
+            <a href="#">Nissan</a> | <a href="#">Toyota</a> | <br /><a href="#"
+              >Volkswagen</a
+            >
+          </p>
+        </div>
+        <div class="links">
+          <h5>Follow Us</h5>
+          <p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2024 Autochek Africa. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+.brandmodal {
+    .modal-content {
+        border: none;
+        padding: 1.5rem .5rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+        border-radius: 3px;
+    }
+
+    .searchbox {
+        width: 95%;
+        padding: 16px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+    }
+
+    .searchbox h3 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .searchbox .input-group {
+        position: relative;
+    }
+
+    .searchbox .input-group button {
+        position: absolute;
+        right: 0;
+        border: none;
+        margin: 3px;
+        padding: 2px 8px;
+        background: #fff;
+        transform: translateX(-52px);
+        z-index: 5;
+    }
+
+    .suggestions {
+        padding: 16px;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    .suggestions h3 {
+        font-size: 16px;
+        color: #30345e;
+    }
+
+    .car-button .btn {
+        font-size: 15px;
+        color: #31355b;
+        padding: 6px 12px;
+        font-weight: 500;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin: 0 7px 7px 0;
+    }
+
+    .car-button .btn:hover {
+        background-color: #f1f1f1;
+    }
+
+    .car-button {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .apply {
+        display: flex;
+        padding-top: 16px;
+        justify-content: center;
+    }
+
+    .apply .btn {
+        width: 270px;
+        padding: 5px;
+        border: none;
+        font-weight: 500;
+        color: #30345e;
+        background: #ffb619;
+        border-radius: 4px;
+        transition: .3s ease-in-out;
+    }
+
+    .apply .btn:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+            rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+            rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    }
+
+    .modal-dialog {
+        max-width: 670px;
+    }
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .info-box {
+            font-family: Arial, sans-serif;
+            border-radius: 0.375rem;
+            padding: 1rem;
+        }
+
+        .info-verified {
+            background-color: #2c3653;
+            color: white;
+        }
+
+        .info-support {
+            background-color: #b9d9e6;
+            color: #2c3653;
+        }
+
+        .info-maintenance {
+            background-color: #fcd46d;
+            color: #2c3653;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .thumbnails-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .thumbnail-scroll {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail-img {
+            cursor: pointer;
+            margin-right: 10px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+            flex: 0 0 auto;
+        }
+
+        .thumbnail-img.active {
+            border-color: #0d6efd;
+        }
+
+        .thumbnail-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 60px;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .thumbnail-nav.prev {
+            left: 0;
+        }
+
+        .thumbnail-nav.next {
+            right: 0;
+        }
+
+        .thumbnail-nav:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carspec">
+        <div class="spec container mt-3">
+            <div class="row g-3 mb-2">
+                <!-- Left side: Carousel and thumbnails -->
+                <div class="col-lg-8 position-relative">
+                    <img alt="Luxury gray car" class="d-block w-100 object-fit-cover rounded" id="mainImage"
+                        src="image/mecerdes2011/e30dnl4m.webp" height="520px">
+                    <button aria-label="Previous"
+                        class="btn btn-link position-absolute top-50 start-0 translate-middle-y text-light fs-2 "
+                        id="prevBtn" style="z-index: 10;">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button aria-label="Next"
+                        class="btn btn-link position-absolute top-50 end-0 translate-middle-y text-light fs-2 "
+                        id="nextBtn" style="z-index: 10;">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+                <!-- Right side: Info boxes -->
+                <div class="col-lg-4 d-flex flex-column gap-3">
+                    <div class="info-box info-verified">
+                        <div class="d-flex align-items-center gap-2 fw-bold fs-5 mb-1">
+                            <svg focusable="false" aria-hidden="true" viewBox="0 0 36 36" data-testid="ShieldIcon"
+                                width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 2.25L4.5 6.75V20.25C4.5 27.7066 10.5434 33.75 18 33.75C25.4566 33.75 31.5 27.7066 31.5 20.25V6.75L18 2.25ZM28.9688 20.25C28.9688 26.3074 24.0574 31.2188 18 31.2188C11.9426 31.2188 7.03125 26.3074 7.03125 20.25V8.64844L18 4.78125L28.9688 8.64844V20.25Z"
+                                    fill="#FAFAFC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M13.3019 16.7027C13.1846 16.5849 13.0451 16.4914 12.8916 16.4276C12.7381 16.3638 12.5734 16.3309 12.4072 16.3309C12.2409 16.3309 12.0762 16.3638 11.9227 16.4276C11.7692 16.4914 11.6297 16.5849 11.5124 16.7027C11.3946 16.82 11.3011 16.9595 11.2373 17.113C11.1735 17.2666 11.1406 17.4312 11.1406 17.5975C11.1406 17.7637 11.1735 17.9284 11.2373 18.0819C11.3011 18.2355 11.3946 18.3749 11.5124 18.4922L16.0616 23.0414L16.1355 23.1152C16.2464 23.2264 16.3782 23.3146 16.5233 23.3748C16.6684 23.4349 16.8239 23.4659 16.981 23.4659C17.138 23.4659 17.2936 23.4349 17.4387 23.3748C17.5837 23.3146 17.7155 23.2264 17.8265 23.1152L25.6839 15.2578C25.7951 15.1469 25.8833 15.0151 25.9434 14.87C26.0036 14.7249 26.0346 14.5694 26.0346 14.4123C26.0346 14.2552 26.0036 14.0997 25.9434 13.9546C25.8833 13.8095 25.7951 13.6778 25.6839 13.5668L25.5855 13.4684C25.4745 13.3572 25.3427 13.269 25.1976 13.2088C25.0526 13.1486 24.897 13.1177 24.74 13.1177C24.5829 13.1177 24.4274 13.1486 24.2823 13.2088C24.1372 13.269 24.0054 13.3572 23.8945 13.4684L16.9792 20.3801L13.3019 16.7027Z"
+                                    fill="#FAFAFC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                            Verified Cars
+                        </div>
+                        <p class="mb-0 fs-6">
+                            Autochek carries several checks on a car to ensure a consistent standard is maintained. These
+                            checks
+                            covers car condition as well as the documentation.
+                        </p>
+                    </div>
+                    <div class="info-box info-support">
+                        <div class="d-flex align-items-center gap-2 fw-bold fs-5 mb-1">
+                            <svg focusable="false" aria-hidden="true" viewBox="0 0 36 36" data-testid="SupportIcon"
+                                width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.5 18.33C31.5 10.095 25.11 4.5 18 4.5C10.965 4.5 4.5 9.975 4.5 18.42C3.6 18.93 3 19.89 3 21V24C3 25.65 4.35 27 6 27H7.5V17.85C7.5 12.045 12.195 7.35 18 7.35C23.805 7.35 28.5 12.045 28.5 17.85V28.5H16.5V31.5H28.5C30.15 31.5 31.5 30.15 31.5 28.5V26.67C32.385 26.205 33 25.29 33 24.21V20.76C33 19.71 32.385 18.795 31.5 18.33Z"
+                                    fill="#232753"></path>
+                                <path
+                                    d="M13.5 21C14.3284 21 15 20.3284 15 19.5C15 18.6716 14.3284 18 13.5 18C12.6716 18 12 18.6716 12 19.5C12 20.3284 12.6716 21 13.5 21Z"
+                                    fill="#232753"></path>
+                                <path
+                                    d="M22.5 21C23.3284 21 24 20.3284 24 19.5C24 18.6716 23.3284 18 22.5 18C21.6716 18 21 18.6716 21 19.5C21 20.3284 21.6716 21 22.5 21Z"
+                                    fill="#232753"></path>
+                                <path
+                                    d="M26.9997 16.545C26.642 14.4362 25.5498 12.5219 23.9164 11.1411C22.2829 9.7602 20.2136 9.00176 18.0747 9C13.5297 9 8.63971 12.765 9.02971 18.675C10.8794 17.9181 12.5131 16.7152 13.7851 15.1737C15.057 13.6321 15.9278 11.7998 16.3197 9.84C18.2847 13.785 22.3197 16.5 26.9997 16.545Z"
+                                    fill="#232753"></path>
+                            </svg>
+                            Dedicated Support Team
+                        </div>
+                        <p class="mb-0 fs-6">
+                            Autochek has a dedicated support team readily available to assist you with the relevant
+                            information
+                            you
+                            require to make better buying decisions.
+                        </p>
+                    </div>
+                    <div class="info-box info-maintenance">
+                        <div class="d-flex align-items-center gap-2 fw-bold fs-5 mb-1">
+                            <svg focusable="false" aria-hidden="true" viewBox="0 0 26 26" data-testid="MaintenanceIcon"
+                                width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1017_32700)">
+                                    <path
+                                        d="M1.313 0L0 1.313L2.313 5.313L3.813 5.093L12.969 14.25L12.188 15C11.788 15.4 11.788 16.006 12.188 16.406L12.594 16.813C12.994 17.213 13.606 17.213 13.906 16.813L15.094 18C14.994 18.6 15.094 19.313 15.594 19.813L21 25.188C22.1 26.288 23.9 26.288 25 25.188C26.3 23.988 26.288 22.194 25.188 21.094L19.813 15.687C19.313 15.187 18.6 14.987 18 15.187L16.687 14C16.987 13.6 16.987 12.988 16.687 12.687L16.312 12.313C16.2211 12.2182 16.112 12.1428 15.9911 12.0912C15.8703 12.0397 15.7403 12.0131 15.609 12.0131C15.4777 12.0131 15.3477 12.0397 15.2269 12.0912C15.106 12.1428 14.9969 12.2182 14.906 12.313L14.25 12.969L5.094 3.813L5.312 2.313L1.312 0L1.313 0ZM20.813 0.031C18.84 -0.133 16.224 1.175 15 2.312C13.494 3.818 13.74 5.787 14.937 7.688L12.813 9.813L14.313 11.5C15.113 10.8 16.293 10.8 17.093 11.5L17.5 11.906L17.594 12L18.469 11.125C20.277 12.188 22.159 12.341 23.594 10.906C24.994 9.606 26.512 6.4 25.812 4.5L23 7.406C22.6 7.806 21.994 7.806 21.594 7.406L18.687 4.5C18.5922 4.40909 18.5168 4.29995 18.4652 4.17914C18.4137 4.05833 18.3871 3.92834 18.3871 3.797C18.3871 3.66566 18.4137 3.53567 18.4652 3.41486C18.5168 3.29405 18.5922 3.18491 18.687 3.094L21.595 0.188C21.345 0.1 21.095 0.055 20.813 0.031ZM9.813 12.5L6.187 16.125C5.79736 16.0384 5.39913 15.9965 5 16C2.2 16 0 18.2 0 21C0 23.8 2.2 26 5 26C7.8 26 10 23.8 10 21C10 20.487 9.919 19.994 9.781 19.531L11.906 17.406L11.594 17C10.794 16.2 10.8 14.988 11.5 14.187L9.812 12.5H9.813ZM17.563 17.063C17.688 17.063 17.806 17.087 17.906 17.188L23.813 23.094C24.013 23.294 24.013 23.612 23.813 23.812C23.613 24.012 23.293 24.012 23.093 23.812L17.188 17.906C16.988 17.706 16.988 17.388 17.188 17.188C17.288 17.088 17.438 17.063 17.563 17.063ZM5.688 18.405L7.594 20.312L6.906 22.905L4.313 23.593L2.406 21.686L3.094 19.093L5.688 18.405Z"
+                                        fill="#232753"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1017_32700">
+                                        <rect width="26" height="26" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Great maintenance Contract
+                        </div>
+                        <p class="mb-0 fs-6">
+                            Autochek has a network of professional maintenance hubs that will help you keep a history of
+                            your
+                            services while providing you with quality car after sales services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4" width="100%">
+                <div class="thumbnail-container">
+                    <button class="thumbnail-nav prev" id="thumbPrevBtn" disabled>&lt;</button>
+                    <div class="thumbnails-wrapper">
+                        <div class="thumbnail-scroll" id="thumbnailContainer">
+                            <!-- Thumbnails inserted by JS -->
+                        </div>
+                    </div>
+                    <button class="thumbnail-nav next" id="thumbNextBtn">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const images = [
+            {
+                src: "image/mecerdes2011/e30dnl4m.webp",
+                alt: "Luxury gray car front view parked on a textured driveway with a g badge on top left",
+            },
+            {
+                src: "image/mecerdes2011/fkNgAtzZ.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/GmVhZk4k.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/iz8xgkaG.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/wTvLQ70v.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/y71Srs0j.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/fkNgAtzZ.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/wTvLQ70v.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            },
+            {
+                src: "image/mecerdes2011/fkNgAtzZ.webp",
+                alt: "Thumbnail image of luxury gray car front view parked on a textured driveway",
+            }
+        ];
+
+        let currentIndex = 0;
+        let thumbOffset = 0;
+        const thumbnailsPerPage = 6;
+
+        const mainImage = document.getElementById("mainImage");
+        const thumbnailContainer = document.getElementById("thumbnailContainer");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const thumbPrevBtn = document.getElementById("thumbPrevBtn");
+        const thumbNextBtn = document.getElementById("thumbNextBtn");
+
+        function updateMainImage(index) {
+            currentIndex = index;
+            mainImage.src = images[index].src;
+            mainImage.alt = images[index].alt;
+            updateActiveThumbnail();
+            ensureThumbnailVisible(index);
+        }
+
+        function updateActiveThumbnail() {
+            const thumbnails = thumbnailContainer.querySelectorAll("img");
+            thumbnails.forEach((thumb, i) => {
+                if (i === currentIndex) {
+                    thumb.classList.add("active");
+                } else {
+                    thumb.classList.remove("active");
+                }
+            });
+        }
+
+        function createThumbnails() {
+            thumbnailContainer.innerHTML = "";
+            images.forEach((img, i) => {
+                const thumb = document.createElement("img");
+                thumb.src = img.src;
+                thumb.alt = img.alt;
+                thumb.className = "thumbnail-img";
+                thumb.height = 80;
+                thumb.width = 120;
+                thumb.addEventListener("click", () => {
+                    updateMainImage(i);
+                });
+                thumbnailContainer.appendChild(thumb);
+            });
+            updateThumbnailNavigation();
+        }
+
+        function updateThumbnailNavigation() {
+            thumbPrevBtn.disabled = thumbOffset === 0;
+            const maxOffset = Math.max(0, images.length - thumbnailsPerPage);
+            thumbNextBtn.disabled = thumbOffset >= maxOffset;
+        }
+
+        function scrollThumbnails(direction) {
+            const thumbnailWidth = 130; // Approximate width of each thumbnail with margin
+            if (direction === 'prev' && thumbOffset > 0) {
+                thumbOffset--;
+            } else if (direction === 'next' && thumbOffset < images.length - thumbnailsPerPage) {
+                thumbOffset++;
+            }
+            
+            thumbnailContainer.style.transform = `translateX(-${thumbOffset * thumbnailWidth}px)`;
+            updateThumbnailNavigation();
+        }
+
+        function ensureThumbnailVisible(index) {
+            if (index < thumbOffset) {
+                thumbOffset = index;
+            } else if (index >= thumbOffset + thumbnailsPerPage) {
+                thumbOffset = index - thumbnailsPerPage + 1;
+            }
+            
+            const thumbnailWidth = 130; // Approximate width of each thumbnail with margin
+            thumbnailContainer.style.transform = `translateX(-${thumbOffset * thumbnailWidth}px)`;
+            updateThumbnailNavigation();
+        }
+
+        prevBtn.addEventListener("click", () => {
+            let newIndex = currentIndex - 1;
+            if (newIndex < 0) newIndex = images.length - 1;
+            updateMainImage(newIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= images.length) newIndex = 0;
+            updateMainImage(newIndex);
+        });
+
+        thumbPrevBtn.addEventListener("click", () => scrollThumbnails('prev'));
+        thumbNextBtn.addEventListener("click", () => scrollThumbnails('next'));
+
+        createThumbnails();
+        updateMainImage(0);
+    </script>
+</body>
+
+</html>

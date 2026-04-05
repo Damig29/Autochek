@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+/* CAR DISPLAY SECTION */
+
+.car-cards {
+    padding: 30px 0 100px;
+}
+
+.car-cards h4 {
+    padding-bottom: 14px;
+    font-weight: bold;
+    color: #31355b;
+}
+
+.cars {
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    box-shadow: 0px 16px 24px 0px #60617029, 0px 2px 8px 0px #28293D0A;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 390px;
+}
+
+.fa-heart {
+    color: #fff;
+    margin: 7px;
+    padding: 7px;
+    font-size: large;
+    border-radius: 50%;
+    background-color: rgba(41, 41, 41, 0.473);
+}
+
+.fa-heart:hover {
+    transition: ease-in 0.1s;
+    background: transparent;
+}
+
+.Mercedes-Benz-GLE .img {
+    background-image: url(images/ADpR42Rm.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.Mercedes-Benz-2015 .img {
+    background-image: url(images/n96cN8Va.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.hyundai2008 .img {
+    background-image: url(images/2008\ Hyundai.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.camry2006 .img {
+    background-image: url(images/xL5o08co.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.lexus2010 .img {
+    background-image: url(images/2010\ Lexus.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.Mercedes-Benz-2016 .img {
+    background-image: url(images/Al670VAm.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.detail {
+    padding: 10px;
+}
+
+.detail h6 {
+    color: #4E538A;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.detail span {
+    padding: 3px 8px;
+    font-size: 12px;
+    color: #31355b;
+    border-radius: 15px;
+    /* margin-bottom: 20px; */
+    background-color: #BFDBFE;
+
+    svg {
+        margin-right: 5px;
+        /* padding-right: 10px; */
+    }
+}
+
+.car-cards {
+    padding: 30px 0 100px;
+}
+
+.car-cards h4 {
+    padding-bottom: 14px;
+    font-weight: bold;
+    color: #31355b;
+}
+
+.cars {
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    box-shadow: 0px 16px 24px 0px #60617029, 0px 2px 8px 0px #28293D0A;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 390px;
+}
+
+.fa-heart {
+    color: #fff;
+    margin: 7px;
+    padding: 7px;
+    font-size: large;
+    border-radius: 50%;
+    background-color: rgba(41, 41, 41, 0.473);
+}
+
+.fa-heart:hover {
+    transition: ease-in 0.1s;
+    background: transparent;
+}
+
+.Mercedes-Benz-GLE .img {
+    background-image: url(images/ADpR42Rm.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.Mercedes-Benz-2015 .img {
+    background-image: url(images/n96cN8Va.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.hyundai2008 .img {
+    background-image: url(images/2008\ Hyundai.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.camry2006 .img {
+    background-image: url(images/xL5o08co.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+
+.lexus2010 .img {
+    background-image: url(images/2010\ Lexus.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.Mercedes-Benz-2016 .img {
+    background-image: url(images/Al670VAm.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.detail {
+    padding: 10px;
+}
+
+.detail h6 {
+    color: #4E538A;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.details {
+    border-bottom: 1px solid #a3a3a3a4;
+    display: flex;
+    gap: 8px;
+}
+
+.details p {
+    background-color: #4E538A;
+    color: white;
+    font-size: 12.5px;
+    padding: 2px 8px;
+    border-radius: 14px;
+}
+
+.buy {
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+.buy h5 {
+    color: #31355b;
+    font-size: 16px;
+}
+
+.buy p {
+    color: #a3a3a3;
+    font-size: 12px;
+}
+
+.buy h4 {
+    padding: 0;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4E538A;
+}
+
+.part {
+    text-align: right;
+}
+
+.purchase {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay .btn-custom {
+    border: 1px solid #31355b;
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    width: 165px;
+}
+
+.pay .btn-custom:hover {
+    background-color: #dbdbdb52;
+}
+
+.loan .btn-custom {
+    border: none;
+    width: 165px;
+    color: #30345E;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #FFB619;
+}
+
+.loan2 .btn-custom {
+    border: none;
+    width: 335px;
+    font-weight: 500;
+    color: #30345E;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #FFB619;
+}
+
+.loan .btn-custom:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.308), 0px 16px 24px rgba(96, 97, 112, 0.082);
+}
+
+.loan2 .btn-custom:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.411), 0px 16px 24px rgba(96, 97, 112, 0.16);
+}
+
+.car-cards .view {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.view button {
+    border: none;
+    padding: 5px 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.view button:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.411), 0px 16px 24px rgba(96, 97, 112, 0.16);
+}
+
+
+/* BRAND NEW CARS */
+
+.special{
+    margin-top: 40px;
+    padding: 1.75rem 0;
+    background-color: #f7f7f7;
+
+    .text h1{
+        font-size: 28px;
+        color: #31355b;
+        font-weight: 600;
+    }
+}
+
+.carloan {
+    padding-bottom: 12px;
+}
+
+.newe {
+    position: absolute;
+    background: rgb(218, 2, 2);
+    top: -7px;
+    right: 17px;
+    color: white;
+    font-size: 8px;
+    padding: 1px 4px;
+    border-radius: 6px;
+}
+
+.details {
+    border-bottom: 1px solid #a3a3a3a4;
+    display: flex;
+    gap: 8px;
+}
+
+.details p {
+    background-color: #4E538A;
+    color: white;
+    font-size: 12.5px;
+    padding: 2px 8px;
+    border-radius: 14px;
+}
+
+.buy {
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+.buy h5 {
+    color: #31355b;
+    font-size: 16px;
+}
+
+.buy p {
+    color: #a3a3a3;
+    font-size: 12px;
+}
+
+.buy h4 {
+    padding: 0;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4E538A;
+}
+
+.part {
+    text-align: right;
+}
+
+.purchase {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay .btn-custom {
+    border: 1px solid #31355b;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 14px;
+    width: 165px;
+}
+
+.pay .btn-custom:hover {
+    background-color: #dbdbdb52;
+}
+
+.loan .btn-custom {
+    border: none;
+    width: 165px;
+    font-size: 14px;
+    color: #30345E;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #FFB619;
+}
+
+.loan2 .btn-custom {
+    border: none;
+    width: 335px;
+    font-weight: 500;
+    color: #30345E;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #FFB619;
+}
+
+.loan .btn-custom:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.308), 0px 16px 24px rgba(96, 97, 112, 0.082);
+}
+
+.loan2 .btn-custom:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.411), 0px 16px 24px rgba(96, 97, 112, 0.16);
+}
+
+.car-cards .view {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.view button {
+    border: none;
+    padding: 5px 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.view button:hover {
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.411), 0px 16px 24px rgba(96, 97, 112, 0.16);
+}
+
+
+.cards{
+        margin: 30px;
+        width: 375px;
+        border-radius: 7px;
+        box-shadow: 0px 16px 24px 0px #60617029, 0px 2px 8px 0px #28293D0A;
+      
+      .container{
+        padding: 0;
+        margin: 0;
+      }
+
+      .carousel{
+        width: 373px;
+        height: 224;
+      }
+      .carousel-item{
+        width: 373px;
+        height: 224px;
+        object-fit: cover;
+      }
+      .carousel-item img{
+        border-radius: 7px 7px 0 0;
+        object-fit: cover;
+        width: 373px;
+        height: 224px;
+      }
+      .detail {
+      padding: 10px;
+  }
+  
+  .detail h6 {
+      color: #4E538A;
+      font-weight: 600;
+      font-size: 20px;
+  }
+  
+  .details {
+      border-bottom: 1px solid #a3a3a3a4;
+      display: flex;
+      gap: 8px;
+  }
+  
+  .details p {
+      background-color: #4E538A;
+      color: white;
+      font-size: 12.5px;
+      padding: 2px 8px;
+      border-radius: 14px;
+  }
+  
+  .buy {
+      display: flex;
+      padding-top: 15px;
+      justify-content: space-between;
+  }
+  
+  .buy h5 {
+      color: #31355b;
+      font-size: 16px;
+  }
+  
+  .buy p {
+      color: #a3a3a3;
+      font-size: 12px;
+  }
+  
+  .buy h4 {
+      padding: 0;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #4E538A;
+  }
+  
+  .part {
+      text-align: right;
+  }
+  
+  .purchase {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .pay .btn-custom {
+      border: 1px solid #31355b;
+      background-color: #fff;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 15px;
+      width: 165px;
+  }
+  
+  .pay .btn-custom:hover {
+      background-color: #dbdbdb52;
+  }
+  
+  .loan .btn-custom {
+      border: none;
+      width: 165px;
+      color: #30345E;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 5px;
+      background-color: #FFB619;
+  }
+  
+  .loan .btn-custom:hover {
+      box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.308), 0px 16px 24px rgba(96, 97, 112, 0.082);
+  }
+  
+  .carloan {
+      padding-bottom: 12px;
+  }
+  
+  .newe {
+      position: absolute;
+      background: rgb(218, 2, 2);
+      top: -7px;
+      right: 17px;
+      color: white;
+      font-size: 8px;
+      padding: 1px 4px;
+      border-radius: 6px;
+  }
+  
+  .details {
+      border-bottom: 1px solid #a3a3a3a4;
+      display: flex;
+      gap: 8px;
+  }
+  
+  .details p {
+      background-color: #4E538A;
+      color: white;
+      font-size: 12.5px;
+      padding: 2px 8px;
+      border-radius: 14px;
+  }
+  
+  .buy {
+      display: flex;
+      padding-top: 15px;
+      justify-content: space-between;
+  }
+  
+  .buy h5 {
+      color: #31355b;
+      font-size: 16px;
+  }
+  
+  .buy p {
+      color: #a3a3a3;
+      font-size: 12px;
+  }
+  
+  .buy h4 {
+      padding: 0;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #4E538A;
+  }
+  
+  .part {
+      text-align: right;
+  }
+  
+  .purchase {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .pay .btn-custom {
+      border: 1px solid #31355b;
+      background-color: #fff;
+      font-weight: 600;
+      border-radius: 5px;
+      padding: 7px 10px;
+      font-size: 14px;
+      width: 165px;
+  }
+  
+  .pay .btn-custom:hover {
+      background-color: #dbdbdb52;
+  }
+  
+  .detail span {
+      padding: 3px 8px;
+      font-size: 12px;
+      color: #31355b;
+      border-radius: 15px;
+      /* margin-bottom: 20px; */
+      background-color: #BFDBFE;
+  
+      svg {
+          margin-right: 5px;
+          /* padding-right: 10px; */
+      }
+  }
+  
+  .carousel-indicators [data-bs-target] {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        margin: 0 2.5px;
+        border: 1px solid transparent;
+        background-color: #00000098;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .carousel-indicators .active {
+        background-color: #FFB619;
+        opacity: 1;
+      }
+      .carousel-indicators [data-bs-target]:hover{
+        background-color: #000000;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+  
+}

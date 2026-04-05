@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+nav {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+.navbar {
+    height: 4.2rem;
+    padding: 0 15px;
+    background: #fff;
+    box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+}
+
+.navbar .container {
+    margin: 0;
+    max-width: 100%;
+}
+
+.navbar .logo {
+    display: flex;
+}
+
+.navbar .logo img {
+    height: 28px;
+    padding: 0 10px;
+}
+
+.navbar .country img {
+    height: 15px;
+}
+
+.navbar .list ul {
+    margin-left: -40px;
+    align-items: center;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    /* gap: 10px; */
+}
+
+.navbar .list ul a {
+    text-decoration: none;
+    color: #31355b;
+    font-weight: 400;
+}
+
+.navbar .list ul li a {
+    padding: 4px 10px;
+}
+
+.new {
+    position: relative;
+}
+
+.newd {
+    position: absolute;
+    background: rgb(218, 2, 2);
+    color: white;
+    font-size: 8px;
+    padding: 1px 4px;
+    margin-top: -10px;
+    border-radius: 10px;
+    transform: translateX(390px);
+}
+
+.navbar .list ul a:hover {
+    border-radius: 5px;
+    background-color: #e7e7e7bd;
+}
+
+.navbar .number a {
+    gap: 7px;
+    display: flex;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #31355b;
+    text-decoration: none;
+}
+
+.navbar .number:hover {
+    border-radius: 6px;
+    background: #e7e7e7bd;
+}
+
+.navbar .number a:hover {
+    font-weight: 500;
+}
+.bar .btn:hover {
+    border: 2px solid #31355b;
+}
+.bar .btn {
+    padding: 0;
+    border-radius: 24px;
+    border: 1px solid #99999969;
+}
+
+.modal-pop-up {
+    .modal.right .modal-dialog {
+        position: absolute;
+        top: -200px;
+        right: 10px;
+        margin: auto;
+        width: 100%;
+        max-width: 100px;
+        /* or whatever width you prefer */
+        height: 100%;
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .modal.right .modal-content {
+        /* height: 100px; */
+        overflow-y: auto;
+    }
+
+    .modal.right.fade .modal-dialog {
+        right: -100px;
+        /* same as your max-width */
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+
+    .modal.right.fade.show .modal-dialog {
+        right: 10px;
+        top: -200px;
+    }
+
+    .modal-content ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .bar button.btn {
+        padding: 0 !important;
+        margin: 0;
+        border-radius: 40px;
+    }
+
+    .modal-body {
+        padding: 0;
+        background-color: #31355b;
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            padding: 16px 16px 6px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        li:hover {
+            background-color: #4e358a;
+        }
+    }
+}

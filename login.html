@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Login
+    </title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="assets/style.css" /> -->
+    <link rel="stylesheet" href="assets/nav.css" />
+    <link rel="stylesheet" href="assets/style2.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.5.2-web/css/all.css"
+    />
+    <style>
+      /* Custom styles to complement Bootstrap */
+
+      /* Divider with line and text */
+      body {
+        color: #31355b;
+      }
+
+      label {
+        font-size: 15px;
+      }
+
+      input:hover {
+        border: 1px solid #31355b;
+      }
+
+      .form-control{
+        padding: 10px 16px ;
+        border-radius: 3px;
+        border: 1px solid #cfcfcf;
+      }
+
+      .form-control:focus {
+        border: 2px solid #31355b !important; 
+        box-shadow: none !important;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        color: #777;
+      }
+
+      .google-btn {
+        border: 1px solid #dbdbdb;
+      }
+
+      .google-btn:hover{
+        border: 1px solid #31355b;
+        background-color: #f7f7f7;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .divider span {
+        padding: 0 15px;
+      }
+
+      /* Flag styling */
+      .flag {
+        width: 20px;
+        height: 14px;
+        margin-right: 5px;
+      }
+
+      .country-code {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .show-btn{
+        border: none;
+      }
+
+      /* Custom button styling to match design */
+      .btn-warning {
+        background-color: #f7b500;
+        /* border-color: #f7b500; */
+        color: #31355b;
+        font-weight: 500;
+        transition: box-shadow .3s ease-in-out;
+      }
+
+      .btn-warning:hover {
+        color: #31355b;
+        background-color: #f7b500;
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 10px 0px rgba(0, 0, 0, 0.12) ;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .card-body {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="container">
+          <div class="logo">
+            <img
+              src="assets/images/logo.webp"
+              alt=""
+              style="border-right: 1px solid #c5c3c3"
+            />
+            <div class="country">
+              <img src="assets/images/ng.webp" alt="" />
+              <i class="fa fa-caret-down" style="color: #999"></i>
+            </div>
+          </div>
+          <div class="list">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="carsales.html">Buy Car</a></li>
+              <li><a href="newcars.html">Brand New</a></li>
+              <li><a href="carloan.html">Car Loan</a></li>
+              <li class="new"><a href="cashloan.html">Cash Loan</a></li>
+              <p class="newd">New</p>
+              <li><a href="sellcar.html">Sell Car</a></li>
+              <li><a href="salesag.html">Sales Agent</a></li>
+            </ul>
+          </div>
+          <div class="number">
+            <a href="tel: +2347002886243">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.9121 1L16.9702 4.05812L13.9121 7.11625"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10.8535 4.05762H16.9698"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M16.2051 13.1715V15.4651C16.2059 15.678 16.1623 15.8888 16.077 16.0839C15.9917 16.279 15.8666 16.4541 15.7097 16.598C15.5528 16.742 15.3676 16.8516 15.1659 16.9198C14.9642 16.988 14.7505 17.0133 14.5384 16.9942C12.1858 16.7386 9.92599 15.9347 7.9405 14.6471C6.09326 13.4733 4.52713 11.9071 3.35332 10.0599C2.06124 8.06538 1.25716 5.79456 1.00621 3.4314C0.9871 3.21998 1.01223 3.0069 1.07998 2.80573C1.14774 2.60455 1.25664 2.41969 1.39976 2.26291C1.54288 2.10613 1.71707 1.98086 1.91125 1.89509C2.10543 1.80932 2.31534 1.76492 2.52762 1.76472H4.82121C5.19225 1.76107 5.55195 1.89246 5.83327 2.1344C6.1146 2.37634 6.29835 2.71232 6.35028 3.07972C6.44708 3.81372 6.62662 4.53441 6.88545 5.22805C6.98831 5.50169 7.01057 5.79909 6.9496 6.085C6.88862 6.3709 6.74696 6.63334 6.54141 6.84121L5.57046 7.81216C6.65881 9.7262 8.2436 11.311 10.1576 12.3993L11.1286 11.4284C11.3365 11.2228 11.5989 11.0812 11.8848 11.0202C12.1707 10.9592 12.4681 10.9815 12.7418 11.0844C13.4354 11.3432 14.1561 11.5227 14.8901 11.6195C15.2615 11.6719 15.6006 11.859 15.8431 12.1451C16.0856 12.4313 16.2144 12.7966 16.2051 13.1715Z"
+                  stroke="#232753"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <p>+234 700-288-6243</p>
+            </a>
+          </div>
+          <div class="bar" data-bs-toggle="modal" data-bs-target="#myModal">
+            <button class="btn">
+              <i
+                class="fa fa-bars"
+                style="
+                  color: #777;
+                  border-radius: 25px;
+                  padding: 7px 20px;
+                "
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- The Modal -->
+    <div class="modal-pop-up">
+      <div
+        class="modal fade right"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="ModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+              <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+  <!-- End of Modal -->
+
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="car">
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <h4 class="fw-semibold my-3">Log In</h4>
+                  <p class="mb-3">Use Social Login</p>
+                  <button
+                    class="btn google-btn w-40 px-5 mx-auto d-flex align-items-center justify-content-center fw-semibold"
+                  >
+                    <svg
+                      class="mx-1"
+                      focusable="false"
+                      aria-hidden="true"
+                      viewBox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20px"
+                      height="20px"
+                    >
+                      <path
+                        fill="#fbc02d"
+                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12 s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20 s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                      ></path>
+                      <path
+                        fill="#e53935"
+                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039 l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                      ></path>
+                      <path
+                        fill="#4caf50"
+                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36 c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                      ></path>
+                      <path
+                        fill="#1565c0"
+                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571 c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                      ></path>
+                    </svg>
+                    <span>Google</span>
+                  </button>
+                </div>
+
+                <div class="divider mb-4">
+                  <span>Or</span>
+                </div>
+
+                <form>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter e-mail address"
+                      id="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        style="position: relative;"
+                        class="form-control"
+                        id="password"
+                        required
+                      />
+                      <button
+                        style="position: absolute; right: 0; top: 5px;"
+                        class="btn show-btn"
+                        type="button"
+                      >
+                        Show
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-3 d-flex justify-content-between">
+                    <div class="remember">
+                      <input type="checkbox" name="checkbox" id="checkbox" checked>
+                      <label for="">Remember me</label>
+                    </div>
+                    <div class="forgot">
+                      <a href="">Forgot Password?</a>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-warning w-100 mb-3"
+                  >
+                    Login
+                  </button>
+                </form>
+
+                <div class="text-center">
+                  <span>New to Autochek?</span>
+                  <a href="signup.html" class="text-decoration-none ms-1"
+                    >Create an Account</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Toggle password visibility
+      document
+        .querySelector(".show-btn")
+        .addEventListener("click", function () {
+          const passwordInput = document.getElementById("password");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.textContent = "Hide";
+          } else {
+            passwordInput.type = "password";
+            this.textContent = "Show";
+          }
+        });
+    </script>
+  </body>
+</html>

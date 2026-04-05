@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Login
-    </title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <title>Login</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <!-- <link rel="stylesheet" href="assets/style.css" /> -->
     <link rel="stylesheet" href="assets/nav.css" />
     <link rel="stylesheet" href="assets/style2.css" />
@@ -32,14 +34,14 @@
         border: 1px solid #31355b;
       }
 
-      .form-control{
-        padding: 10px 16px ;
+      .form-control {
+        padding: 10px 16px;
         border-radius: 3px;
         border: 1px solid #cfcfcf;
       }
 
       .form-control:focus {
-        border: 2px solid #31355b !important; 
+        border: 2px solid #31355b !important;
         box-shadow: none !important;
       }
 
@@ -53,7 +55,7 @@
         border: 1px solid #dbdbdb;
       }
 
-      .google-btn:hover{
+      .google-btn:hover {
         border: 1px solid #31355b;
         background-color: #f7f7f7;
       }
@@ -82,7 +84,7 @@
         justify-content: center;
       }
 
-      .show-btn{
+      .show-btn {
         border: none;
       }
 
@@ -92,14 +94,15 @@
         /* border-color: #f7b500; */
         color: #31355b;
         font-weight: 500;
-        transition: box-shadow .3s ease-in-out;
+        transition: box-shadow 0.3s ease-in-out;
       }
 
       .btn-warning:hover {
         color: #31355b;
         background-color: #f7b500;
-        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-        0px 1px 10px 0px rgba(0, 0, 0, 0.12) ;
+        box-shadow:
+          0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 10px 0px rgba(0, 0, 0, 0.12);
       }
 
       /* Responsive adjustments */
@@ -175,11 +178,7 @@
             <button class="btn">
               <i
                 class="fa fa-bars"
-                style="
-                  color: #777;
-                  border-radius: 25px;
-                  padding: 7px 20px;
-                "
+                style="color: #777; border-radius: 25px; padding: 7px 20px"
               ></i>
             </button>
           </div>
@@ -208,8 +207,8 @@
           </div>
         </div>
       </div>
-   </div>
-  <!-- End of Modal -->
+    </div>
+    <!-- End of Modal -->
 
     <main>
       <div class="container">
@@ -258,7 +257,6 @@
                 </div>
 
                 <form>
-
                   <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
                     <input
@@ -275,13 +273,13 @@
                     <div class="input-group">
                       <input
                         type="password"
-                        style="position: relative;"
+                        style="position: relative"
                         class="form-control"
                         id="password"
                         required
                       />
                       <button
-                        style="position: absolute; right: 0; top: 5px;"
+                        style="position: absolute; right: 0; top: 5px"
                         class="btn show-btn"
                         type="button"
                       >
@@ -292,7 +290,12 @@
 
                   <div class="mb-3 d-flex justify-content-between">
                     <div class="remember">
-                      <input type="checkbox" name="checkbox" id="checkbox" checked>
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        id="checkbox"
+                        checked
+                      />
                       <label for="">Remember me</label>
                     </div>
                     <div class="forgot">
@@ -300,10 +303,7 @@
                     </div>
                   </div>
 
-                  <button
-                    type="submit"
-                    class="btn btn-warning w-100 mb-3"
-                  >
+                  <button type="submit" class="btn btn-warning w-100 mb-3">
                     Login
                   </button>
                 </form>
@@ -323,9 +323,7 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    <script>
       // Toggle password visibility
       document
         .querySelector(".show-btn")
@@ -342,3 +340,4 @@
     </script>
   </body>
 </html>
+
